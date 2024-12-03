@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8vh;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #c72744;
+    font-size: 8vh;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 5rem;
+    background-color: #c23b54;
+    color: #fff;
+    z-index: 20;
+    min-height: 60px;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat.woff2') format('woff2');
+    font-display: swap;
+}
+
+.logo {
+    max-width: 15rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    transition-duration: .2s;
+    color: #000000;
+    font-size: 118%;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+#Main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#maps {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 750px;
+    max-width: 1080px;
+    padding-right: 3%;
+}
+
+form {
+    margin-top: 50px;
+    background-color: #dfdfdf;
+    padding: 20px;
+    max-width: 65%;
+    margin-left: 15rem;
+    margin-right: 5rem;
+    box-shadow: -10px 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+.form_input {
+    margin-bottom: 1rem;
+}
+
+#enviar {
+    font-size: 1.1rem;
+    background-color: #ececec;
+}
+
+#enviar:hover {
+    cursor: pointer;
+    transition-duration: .5s;
+    background-color: #c23b54;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-left: 3px solid #c72744;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    max-height: 150px;
+}
+
+label {
+    font-size: .8rem;
+}
+
+.checkbox {
+    width: auto;
+    height: auto;
+}
+
+footer p {
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        background-color: transparent;
+        font-size: 2.5rem;
+        color: #ececec;
+    }
+
+    .abrir-menu {
+        padding-right: 1.9rem;
+        padding-top: 1.7rem;
+    }
+
+    .abrir-menu:hover {
+        color: #131313;
+    }
+
+    .cerrar-menu:hover {
+        color: #c42845;
+    }
+
+    .cerrar-menu {
+        padding-left: 12rem;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #131313;
+        padding: 4rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 15;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .nav-list li a {
+        color: #ececec;
+    }
+
+    .nav-list li a:hover {
+        color: #c42845;
+        font-size: 1.2rem;
+        transition: color 0.2s ease;
+    }
+
+    form {
+        margin-top: 50px;
+        background-color: #dfdfdf;
+        padding: 20px;
+        max-width: 90%;
+        margin: auto;
+        box-shadow: -10px 20px 35px rgba(0, 0, 0, 0.192);
+    }
+
+    #maps {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        min-width: auto;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-list {
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .carta {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .carta {
+        top: 70%;
+    }
+}
